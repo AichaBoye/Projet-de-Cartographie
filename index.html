@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Se déplacer à Abidjan</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:wght@600;800&display=swap">
+<style>
+:root{--bg:#f6f9f8;--card:#fff;--ink:#14262b;--muted:#46595e;--line:#c9d9da;--brand:#0b5c6b;--on:#fff;--soft:#e3f0f1;--warn:#fff3d6;--nord:#2a7fb8;--est:#e07b39;--sud:#3c9a5f;--metro:#7a3b8f;--brt:#c23a4a;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1a1d;--card:#14262b;--ink:#e8f1f1;--muted:#a3b9bd;--line:#2c444b;--brand:#6fc3d1;--on:#0e1a1d;--soft:#193238;--warn:#3a3014}}
+:root[data-theme="dark"]{--bg:#0e1a1d;--card:#14262b;--ink:#e8f1f1;--muted:#a3b9bd;--line:#2c444b;--brand:#6fc3d1;--on:#0e1a1d;--soft:#193238;--warn:#3a3014}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:1.0625rem/1.65 "Atkinson Hyperlegible",system-ui,-apple-system,"Segoe UI",sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque","Atkinson Hyperlegible",system-ui,sans-serif;line-height:1.15;margin:0 0 .6em}
+h1{font-size:clamp(2rem,5.5vw,3.4rem);font-weight:800;max-width:20ch}
+h2{font-size:1.5rem;font-weight:800;margin-top:2rem}
+h3{font-size:1.15rem;font-weight:600}
+p,li{max-width:70ch}
+a{color:var(--brand)}
+a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--brand);outline-offset:3px;border-radius:3px}
+h1:focus{outline:none}
+.skip{position:absolute;left:-999px;background:var(--brand);color:var(--on);padding:.6rem 1rem;z-index:20}
+.skip:focus{left:.5rem;top:.5rem}
+header.top{border-bottom:1px solid var(--line);background:var(--card);padding:.8rem 1.2rem}
+.brand{font:800 1.1rem "Bricolage Grotesque",sans-serif;color:var(--ink);text-decoration:none}
+nav ul{list-style:none;margin:.5rem 0 0;padding:0;display:flex;flex-wrap:wrap;gap:.25rem .5rem}
+nav a{display:inline-block;padding:.45rem .8rem;border-radius:.5rem;color:var(--ink);text-decoration:none;min-height:44px;line-height:1.7}
+nav a:hover{background:var(--soft)}
+nav a[aria-current="page"]{background:var(--brand);color:var(--on);font-weight:700}
+main{max-width:62rem;margin:0 auto;padding:2rem 1.2rem 3rem}
+section[hidden]{display:none}
+.lead{font-size:1.25rem;max-width:52ch}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(9rem,1fr));gap:1rem;margin:1.5rem 0;padding:0}
+.stats div{border-left:4px solid var(--brand);padding-left:.8rem}
+.stats dt{color:var(--muted);font-size:.95rem}
+.stats dd{margin:0;font:800 1.8rem "Bricolage Grotesque",sans-serif}
+.box{background:var(--card);border:1px solid var(--line);border-radius:.8rem;padding:1.1rem 1.3rem;margin:1.2rem 0}
+.box.note{background:var(--warn)}
+.btn{display:inline-block;background:var(--brand);color:var(--on);padding:.7rem 1.2rem;border-radius:.6rem;text-decoration:none;font-weight:700;margin:.3rem .5rem .3rem 0}
+.btn.alt{background:transparent;color:var(--brand);border:2px solid var(--brand)}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));gap:1rem}
+.cols .box{margin:0}
+.map{width:100%;height:min(70vh,560px);min-height:360px;border:1px solid var(--line);border-radius:.6rem;background:var(--soft)}
+.leg{list-style:none;padding:0}
+.leg li{display:flex;gap:.7rem;align-items:flex-start;margin:.5rem 0}
+.sw{flex:none;width:1.1rem;height:1.1rem;border-radius:50%;margin-top:.35rem}
+fieldset{border:1px solid var(--line);border-radius:.6rem;padding:.6rem 1rem;margin:1rem 0}
+fieldset label{display:inline-flex;align-items:center;gap:.4rem;margin-right:1.2rem;min-height:44px;cursor:pointer}
+input[type=radio]{width:1.2rem;height:1.2rem;accent-color:var(--brand)}
+.bars{list-style:none;margin:1rem 0;padding:0}
+.bars li{display:grid;grid-template-columns:7.5rem 1fr 9rem;gap:.6rem;align-items:center;max-width:none;padding:.25rem 0}
+.bars .tr{background:var(--line);border-radius:4px;height:1.1rem}
+.bars .b{display:block;height:100%;background:var(--brand);border-radius:4px}
+.bars .v{font-variant-numeric:tabular-nums;text-align:right}
+.bars li.out .b{background:repeating-linear-gradient(45deg,var(--brand) 0 6px,var(--soft) 6px 10px)}
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:.6rem}
+table{border-collapse:collapse;width:100%;min-width:34rem;background:var(--card)}
+caption{text-align:left;padding:.7rem 1rem;font-weight:700}
+th,td{padding:.6rem 1rem;border-top:1px solid var(--line);text-align:right;font-variant-numeric:tabular-nums}
+th:first-child,td:first-child{text-align:left}
+th button{font:inherit;font-weight:700;background:none;border:0;color:var(--ink);cursor:pointer;padding:.3rem;min-height:44px}
+tfoot td{font-weight:700;background:var(--soft)}
+figure{margin:0}
+.ph{aspect-ratio:4/3;background:var(--soft);border:2px dashed var(--line);border-radius:.6rem;display:grid;place-items:center;text-align:center;padding:1rem;color:var(--muted)}
+figcaption{font-size:.95rem;color:var(--muted);margin-top:.4rem}
+details{background:var(--card);border:1px solid var(--line);border-radius:.6rem;padding:.4rem 1rem;margin:.5rem 0}
+summary{cursor:pointer;font-weight:700;padding:.4rem 0;min-height:44px}
+dt{font-weight:700}
+dd{margin:0 0 .8rem}
+footer{border-top:1px solid var(--line);padding:1.5rem 1.2rem;text-align:center;color:var(--muted)}
+@media (max-width:560px){.bars li{grid-template-columns:5.8rem 1fr;}.bars .v{grid-column:1/-1;text-align:left;padding-left:6.4rem;margin-top:-.4rem}}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#contenu" id="skip">Aller au contenu</a>
+<header class="top">
+<a class="brand" href="#accueil">Se déplacer à Abidjan</a>
+<nav aria-label="Pages du site"><ul id="menu"></ul></nav>
+</header>
+<main id="contenu" tabindex="-1">
+
+<section id="accueil" data-t="Accueil" hidden>
+<h1 tabindex="-1">Se déplacer à Abidjan : où sont les arrêts, où vivent les habitants ?</h1>
+<p class="lead">Abidjan est la plus grande ville de Côte d’Ivoire. Ici, on se déplace surtout en gbaka (minibus) et en woro-woro (taxi collectif). Nous avons placé leurs arrêts sur une carte pour voir quelles communes sont bien ou mal desservies.</p>
+<dl class="stats" aria-label="Chiffres clés">
+<div><dt>Communes étudiées</dt><dd>13</dd></div>
+<div><dt>Habitants en 2021</dt><dd>6,3 millions</dd></div>
+<div><dt>Arrêts cartographiés</dt><dd>4 834</dd></div>
+<div><dt>Lignes de transport</dt><dd>490</dd></div>
+</dl>
+<div class="box"><h2 style="margin-top:0">Notre question</h2>
+<p>Les habitants des communes les plus éloignées du centre ont-ils moins d’arrêts à proximité que ceux du centre ?</p>
+<p><small>Question proposée, à confirmer ou reformuler par le groupe.</small></p></div>
+<p><a class="btn" href="#carte">Ouvrir la carte</a><a class="btn alt" href="#donnees">Voir les chiffres</a></p>
+<h2>Qui sommes-nous ?</h2>
+<p>Projet de cartographie réalisé par Marie Aissatou Boye, [Prénom Nom] et [Prénom Nom].</p>
+<h2>Comment utiliser ce site</h2>
+<ol><li>Lisez la page <a href="#territoire">Le territoire</a> pour savoir de quoi on parle.</li><li>Explorez la <a href="#carte">carte interactive</a> : cliquez sur une commune ou un arrêt.</li><li>Comparez les communes dans <a href="#donnees">Les données</a>.</li><li>Regardez nos <a href="#propositions">propositions</a> et nos <a href="#sources">sources</a>.</li></ol>
+</section>
+
+<section id="territoire" data-t="Le territoire" hidden>
+<h1 tabindex="-1">Le territoire étudié</h1>
+<p class="lead">Nous étudions le District autonome d’Abidjan : 13 communes, 6 321 017 habitants en 2021, sur 2 119 km².</p>
+<div class="cols">
+<div class="box"><h2 style="margin-top:0">Dix communes en ville</h2><p>Abobo, Adjamé, Attécoubé, Cocody, Koumassi, Marcory, Le Plateau, Port-Bouët, Treichville et Yopougon.</p><p>Le Plateau est le quartier des bureaux : 7 186 habitants seulement, mais beaucoup de monde y vient travailler.</p></div>
+<div class="box"><h2 style="margin-top:0">Trois communes autour</h2><p>Anyama, Bingerville et Songon, plus loin du centre et plus récemment urbanisées.</p><p>Leurs limites sur la carte sont approximatives.</p></div>
+</div>
+<h2>Deux lieux à part</h2>
+<div class="box note"><h3>Pourquoi Brofodoumé n’est pas sur la carte</h3><p>Le recensement la compte dans le District, mais ce n’est plus une commune depuis mars 2012 : c’est seulement une sous-préfecture. Notre consigne porte sur les communes, donc nous l’avons retirée. Ses 20 357 habitants expliquent l’écart entre le total des 13 communes (6 300 660) et celui du District. Aucun arrêt de nos données n’y est situé.</p></div>
+<div class="box"><h3>Grand-Bassam</h3><p>Cette ville est hors du District, mais elle apparaît dans les données de transport (2 opérateurs, 3 lignes). Nous la gardons comme zone en bordure, sans l’analyser comme une commune du District.</p></div>
+<p><a class="btn" href="#donnees">Comparer les communes</a></p>
+</section>
+
+<section id="carte" data-t="La carte" hidden>
+<h1 tabindex="-1">La carte interactive</h1>
+<p class="lead">Zoomez, déplacez la carte et cliquez : une commune affiche sa population, son nombre d’arrêts et ses habitants par arrêt ; un arrêt affiche son nom et sa commune.</p>
+<iframe class="map" title="Carte interactive de la mobilité dans le District autonome d’Abidjan" src="https://www.google.com/maps/d/embed?mid=1e9cyUT5NYOGncZpbd1kboni1wAykreo&amp;ehbc=2E312F" loading="lazy"></iframe>
+<p>La carte ne s’affiche pas ? <a href="https://www.google.com/maps/d/viewer?mid=1e9cyUT5NYOGncZpbd1kboni1wAykreo" target="_blank" rel="noopener">Ouvrez-la dans un nouvel onglet (Google My Maps)</a>.</p>
+<h2>Ce que montrent les calques</h2>
+<p>Un calque est une couche de la carte que l’on peut afficher ou cacher avec la case à cocher dans la légende.</p>
+<ul class="leg">
+<li><span class="sw" style="background:var(--brand)"></span><span><strong>Communes (13)</strong> : plus la couleur est foncée, plus la commune est peuplée.</span></li>
+<li><span class="sw" style="background:var(--nord)"></span><span><strong>Arrêts nord et ouest</strong> : 1 869 arrêts (Yopougon, Abobo, Anyama, Songon).</span></li>
+<li><span class="sw" style="background:var(--est)"></span><span><strong>Arrêts est</strong> : 1 835 arrêts (Cocody, Bingerville, Le Plateau).</span></li>
+<li><span class="sw" style="background:var(--sud)"></span><span><strong>Arrêts centre et sud</strong> : 1 130 arrêts (les six autres communes et les arrêts hors communes).</span></li>
+<li><span class="sw" style="background:var(--metro)"></span><span><strong>Métro ligne 1, en construction</strong> : 37 km et 18 stations prévus, livraison annoncée fin 2028. Le tracé déjà dessiné compte 12 stations.</span></li>
+<li><span class="sw" style="background:var(--brt)"></span><span><strong>BRT, en construction</strong> : bus rapide sur voie réservée, 20 km prévus, mise en service annoncée en juillet 2027. Le tracé déjà dessiné relie Yao Sehi à Feh Kessé (10 stations).</span></li>
+</ul>
+<p><small>Les arrêts sont répartis en trois calques car Google My Maps limite chaque fichier importé à 2 000 lignes.</small></p>
+</section>
+
+<section id="donnees" data-t="Les données" hidden>
+<h1 tabindex="-1">Les données</h1>
+<p class="lead">Population et arrêts de gbaka et de woro-woro pour chacune des 13 communes.</p>
+<fieldset><legend>Classer les communes selon</legend>
+<label><input type="radio" name="m" value="hab" checked> Habitants par arrêt</label>
+<label><input type="radio" name="m" value="arr"> Nombre d’arrêts</label>
+<label><input type="radio" name="m" value="pop"> Population</label></fieldset>
+<h2 id="ct" style="margin-top:0"></h2>
+<p id="cd"></p>
+<ul class="bars" id="bars" aria-labelledby="ct"></ul>
+<p id="cn"></p>
+<div class="box"><h2 style="margin-top:0">Ce que l’on voit</h2><ul>
+<li>Anyama a le moins d’arrêts pour sa population : 3 746 habitants par arrêt.</li>
+<li>Cocody concentre 1 249 arrêts, soit 26 % du total.</li>
+<li>Yopougon et Abobo réunissent 2 911 148 habitants, soit 46 % du District.</li>
+<li>Le Plateau a 96 arrêts pour 7 186 habitants : le ratio n’a pas de sens ici, car on y travaille plus qu’on n’y habite.</li>
+<li>Anyama et Songon semblent peu desservies, mais pas Bingerville, bien pourvue en arrêts.</li></ul></div>
+<h2>Tableau complet</h2>
+<div class="tw" role="region" aria-label="Tableau des communes, défilement horizontal possible" tabindex="0"><table id="tb"></table></div>
+<p><small>Sources : RGPH 2021 et GTFS mdb-2078, calcul du groupe. Résultats indicatifs : voir « Sources et méthode ».</small></p>
+<h2>Les lignes de transport</h2>
+<dl class="stats">
+<div><dt>Lignes au total</dt><dd>490</dd></div>
+<div><dt>Lignes de gbaka</dt><dd>149</dd></div>
+<div><dt>Lignes de woro-woro</dt><dd>341</dd></div>
+<div><dt>Opérateurs</dt><dd>23</dd></div></dl>
+<p>Les trois plus gros réseaux sont Woro-woro de Cocody (87 lignes), Woro-woro banalisé (85) et Gbaka d’Adjamé (65). Un opérateur désigne ici un regroupement de lignes par commune, pas forcément une entreprise.</p>
+</section>
+
+<section id="photos" data-t="Photos" hidden>
+<h1 tabindex="-1">Photos</h1>
+<p class="lead">Le quotidien des déplacements à Abidjan en images.</p>
+<div class="cols">
+<figure><div class="ph">Photo à ajouter : un gbaka</div><figcaption>Gbaka. Source : à compléter.</figcaption></figure>
+<figure><div class="ph">Photo à ajouter : un woro-woro</div><figcaption>Woro-woro. Source : à compléter.</figcaption></figure>
+<figure><div class="ph">Photo à ajouter : une gare routière</div><figcaption>Gare routière d’Adjamé. Source : à compléter.</figcaption></figure>
+<figure><div class="ph">Photo à ajouter : le chantier du métro</div><figcaption>Chantier du métro. Source : à compléter.</figcaption></figure>
+</div>
+</section>
+
+<section id="propositions" data-t="Nos propositions" hidden>
+<h1 tabindex="-1">Nos propositions de valorisation du territoire</h1>
+<p class="lead">Cette page sera écrite après l’analyse complète des données.</p>
+<div class="cols">
+<div class="box"><h2 style="margin-top:0">Ce que nous avons constaté</h2><p>À compléter.</p></div>
+<div class="box"><h2 style="margin-top:0">Ce que nous proposons</h2><p>À compléter.</p></div>
+<div class="box"><h2 style="margin-top:0">Pourquoi cela aiderait</h2><p>À compléter.</p></div>
+</div>
+</section>
+
+<section id="sources" data-t="Sources et méthode" hidden>
+<h1 tabindex="-1">Sources et méthode</h1>
+<h2>Nos sources</h2>
+<ul>
+<li><strong>Population par commune</strong> : Recensement général de la population et de l’habitat (RGPH) 2021, ministère du Plan et du Développement de Côte d’Ivoire. <a href="https://plan.gouv.ci/uploads/publications/RGPH2021-RESULTATS-GLOBAUX-VF.pdf">Résultats globaux (PDF)</a></li>
+<li><strong>Arrêts, lignes et opérateurs</strong> : fichier GTFS de Mobility Database (jeu mdb-2078), qui décrit le réseau en 2023. <a href="https://mobilitydatabase.org/feeds/gtfs/mdb-2078">Voir le jeu de données</a></li>
+<li><strong>Limites des communes</strong> : <a href="https://www.openstreetmap.org">OpenStreetMap</a>, carte libre faite par des bénévoles.</li>
+<li><strong>Fond de carte du pays</strong> : HDX (Humanitarian Data Exchange), jeu cod-ab-civ, découpage de 2018. <a href="https://data.humdata.org/dataset/cod-ab-civ">Voir le jeu</a></li>
+<li><strong>Tracés du métro et du BRT</strong> : OpenStreetMap, extrait de la Côte d’Ivoire téléchargé sur <a href="https://download.geofabrik.de/africa/ivory-coast.html">Geofabrik</a> le 27/10/2026.</li>
+<li><strong>Chiffres du métro</strong> : <a href="https://www.fratmat.info/article/230334/economie/transport-ferroviaire/metro-dabidjan-voici-le-trace-exact-de-la-ligne-1">Fraternité Matin, 8 juillet 2023</a></li>
+<li><strong>Chiffres du BRT</strong> : <a href="https://afrik21.africa/en/work-begins-on-abidjans-brt-to-link-yopougon-and-bingerville-in-45-minutes">Afrik 21</a></li>
+<li><strong>Statut de Brofodoumé</strong> : <a href="https://en.wikipedia.org/wiki/Brofodoum%C3%A9">Wikipédia</a></li>
+</ul>
+<h2>Notre méthode</h2>
+<ol>
+<li>Nous avons récupéré les données de transport, de population et de limites des communes.</li>
+<li>Dans QGIS, un logiciel de cartographie, nous avons assemblé les limites des 13 communes, puis relié la population de 2021.</li>
+<li>Toujours dans QGIS, nous avons rattaché chacun des 4 834 arrêts à la commune où il se trouve. Nous avons ainsi compté les arrêts et calculé les habitants par arrêt. 4 752 arrêts tombent dans une commune ; 82 sont hors communes.</li>
+<li>Nous avons exporté ces données dans Google My Maps pour créer la carte interactive.</li>
+<li>Nous avons ajouté les tracés du métro et du BRT, en construction, pour comparer le réseau d’aujourd’hui avec celui de demain.</li>
+</ol>
+<h2>Les limites de notre travail</h2>
+<ul>
+<li>Les données de transport datent de 2023 et la population de 2021 : le réseau a pu changer depuis.</li>
+<li>Les limites d’Anyama, Bingerville et Songon sont approximatives : leurs nombres d’arrêts sont à lire avec prudence.</li>
+<li>Seuls les gbaka et les woro-woro sont pris en compte, pas les bus de la SOTRA (société de transport publique) ni les bateaux-bus. Une commune peut sembler mal desservie alors qu’elle a d’autres transports.</li>
+<li>Les tracés du métro et du BRT dans OpenStreetMap ne sont pas encore complets.</li>
+<li>Une zone sans arrêt peut être une zone non relevée, pas forcément une zone sans transport.</li>
+</ul>
+<h2>Points de vigilance dans les données</h2>
+<ul>
+<li>Pour Adjamé, Cocody, Port-Bouët et Anyama, hommes + femmes donne 1 habitant de plus ou de moins que le total. L’écart vient du recensement : nous gardons le total officiel.</li>
+<li>OpenStreetMap donne parfois une population (251 000 pour Cocody), mais elle est ancienne et sans source claire : nous ne l’utilisons pas.</li>
+<li>« Woro-woro d’Attécoubé » est écrit de trois façons dans le fichier : nous l’avons compté une fois, soit 23 opérateurs et non 25.</li>
+<li>Le type de transport est écrit de façons variables dans les noms de lignes : nous l’avons pris dans le nom de l’opérateur, plus fiable.</li>
+<li>82 arrêts sont hors des 13 communes : 66 sur la route de Grand-Bassam et 16 entre Yopougon et Songon.</li>
+<li>Toutes les lignes sont de type « bus routier » : il n’y a ni bus SOTRA ni bateaux-bus.</li>
+</ul>
+<h2>Petit glossaire</h2>
+<details><summary>Ouvrir les définitions</summary><dl>
+<dt>Gbaka</dt><dd>Minibus privé de transport collectif, surtout pour les longs trajets entre communes, souvent depuis de grandes gares comme Adjamé.</dd>
+<dt>Woro-woro</dt><dd>Taxi collectif : plusieurs clients sur le même trajet, chacun paie sa place. La plupart circulent à l’intérieur d’une commune.</dd>
+<dt>Woro-woro banalisé</dt><dd>Woro-woro rattaché à aucune commune, qui relie plusieurs communes. Dans nos données, 85 lignes.</dd>
+<dt>GTFS (General Transit Feed Specification)</dt><dd>Format ouvert pour décrire un réseau de transport : un dossier de tableaux en texte simple (arrêts, lignes, opérateurs, horaires).</dd>
+<dt>OpenStreetMap (OSM)</dt><dd>Carte du monde libre, construite par des volontaires, un peu comme Wikipédia.</dd>
+<dt>Overpass Turbo</dt><dd>Site qui permet de télécharger une partie précise des données d’OpenStreetMap.</dd>
+<dt>KML</dt><dd>Format de fichier de données géographiques, lu par Google My Maps et Google Earth.</dd>
+<dt>RGPH (Recensement général de la population et de l’habitat)</dt><dd>Recensement de la Côte d’Ivoire. Le dernier date de 2021.</dd>
+<dt>Jointure</dt><dd>Relier deux tableaux grâce à une colonne commune, ici le nom de la commune.</dd>
+<dt>Jointure spatiale</dt><dd>Même idée, avec la position : chaque arrêt est rattaché à la commune où il se trouve.</dd>
+<dt>BRT (Bus Rapid Transit)</dt><dd>Bus rapide circulant sur une voie réservée.</dd>
+</dl></details>
+</section>
+</main>
+<footer><p style="margin:0 auto">Projet de cartographie, Abidjan, 2026. Données : RGPH 2021, GTFS 2023, OpenStreetMap.</p></footer>
+
+<script>
+const P=[["accueil","Accueil"],["territoire","Le territoire"],["carte","La carte"],["donnees","Les données"],["photos","Photos"],["propositions","Nos propositions"],["sources","Sources et méthode"]];
+const D=[["Abobo",1340083,747],["Adjamé",340892,255],["Attécoubé",313135,145],["Cocody",692583,1249],["Koumassi",412282,145],["Marcory",214061,101],["Le Plateau",7186,96],["Port-Bouët",618795,239],["Treichville",106552,163],["Yopougon",1571065,984],["Anyama",389592,104],["Bingerville",204656,490],["Songon",89778,34]];
+const TOT=6321017,F=n=>n.toLocaleString("fr-FR"),pc=x=>(x*100).toFixed(1).replace(".",",")+" %";
+const M={hab:{t:"Habitants par arrêt",d:"Plus la barre est longue, moins la commune a d’arrêts pour sa population.",f:r=>Math.round(r[1]/r[2]),u:" habitants/arrêt"},arr:{t:"Nombre d’arrêts",d:"Plus la barre est longue, plus la commune compte d’arrêts.",f:r=>r[2],u:" arrêts"},pop:{t:"Population en 2021",d:"Plus la barre est longue, plus la commune est peuplée.",f:r=>r[1],u:" habitants"}};
+let mk="hab",S={k:1,d:-1};
+const $=s=>document.querySelector(s);
+$("#menu").innerHTML=P.map(p=>`<li><a href="#${p[0]}">${p[1]}</a></li>`).join("");
+function route(first){
+  let id=location.hash.slice(1);if(!P.some(p=>p[0]===id))id="accueil";
+  document.querySelectorAll("main>section").forEach(s=>s.hidden=s.id!==id);
+  document.querySelectorAll("#menu a").forEach(a=>a.getAttribute("href")==="#"+id?a.setAttribute("aria-current","page"):a.removeAttribute("aria-current"));
+  const s=$("#"+id);document.title=s.dataset.t+" | Se déplacer à Abidjan";
+  window.scrollTo(0,0);if(!first)s.querySelector("h1").focus();
+}
+addEventListener("hashchange",()=>route(false));
+$("#skip").addEventListener("click",e=>{e.preventDefault();$("#contenu").focus()});
+function chart(){
+  const m=M[mk],rows=[...D].sort((a,b)=>m.f(b)-m.f(a)),mx=Math.max(...rows.map(m.f));
+  $("#ct").textContent=m.t+", commune par commune";$("#cd").textContent=m.d;
+  $("#bars").innerHTML=rows.map(r=>{const v=m.f(r),o=mk==="hab"&&r[0]==="Le Plateau";
+    return `<li${o?' class="out"':""}><span>${r[0]}</span><span class="tr" aria-hidden="true"><span class="b" style="width:${Math.max(v/mx*100,1)}%"></span></span><span class="v">${F(v)}${m.u}${o?" *":""}</span></li>`}).join("");
+  $("#cn").innerHTML=mk==="hab"?"<small>* Le Plateau est un quartier de bureaux : peu d’habitants, beaucoup d’arrêts. Ce chiffre n’est pas comparable aux autres.</small>":"";
+}
+function table(foc){
+  const H=[["Commune",0],["Population 2021",1],["Part du District",1],["Arrêts",2],["Habitants par arrêt",3]];
+  const v=(r,k)=>k===0?r[0]:k===1?r[1]:k===2?r[2]:Math.round(r[1]/r[2]);
+  const rows=[...D].sort((a,b)=>S.k===0?S.d*-a[0].localeCompare(b[0],"fr"):S.d*(v(a,S.k)-v(b,S.k)));
+  const col=i=>H[i][1];
+  $("#tb").innerHTML=`<caption>Les 13 communes du District. Cliquez sur un titre de colonne pour trier.</caption><thead><tr>${H.map((h,i)=>`<th scope="col" aria-sort="${S.i===i?(S.d>0?"ascending":"descending"):"none"}"><button type="button" data-i="${i}">${h[0]}${S.i===i?(S.d>0?" ▲":" ▼"):""}</button></th>`).join("")}</tr></thead><tbody>${rows.map(r=>`<tr><th scope="row" style="font-weight:400">${r[0]}</th><td>${F(r[1])}</td><td>${pc(r[1]/TOT)}</td><td>${F(r[2])}</td><td>${F(Math.round(r[1]/r[2]))}</td></tr>`).join("")}</tbody><tfoot><tr><td>Total des 13 communes</td><td>6 300 660</td><td>99,7 %</td><td>4 752</td><td>1 326</td></tr></tfoot>`;
+  if(foc)$(`#tb button[data-i="${S.i}"]`).focus();
+}
+S={k:1,i:1,d:-1};
+$("#tb").addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;const i=+b.dataset.i,k=[0,1,1,2,3][i];
+  if(S.i===i)S.d*=-1;else S={k,i,d:i===0?1:-1};table(true)});
+document.querySelectorAll("input[name=m]").forEach(r=>r.addEventListener("change",e=>{mk=e.target.value;chart()}));
+chart();table(false);route(true);
+</script>
+</body>
+</html>
