@@ -63,6 +63,9 @@ th:first-child,td:first-child{text-align:left}
 th button{font:inherit;font-weight:700;background:none;border:0;color:var(--ink);cursor:pointer;padding:.3rem;min-height:44px}
 tfoot td{font-weight:700;background:var(--soft)}
 figure{margin:0}
+figure img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:.6rem}
+.banner{margin:0 0 1.5rem;border-radius:.8rem;overflow:hidden;background:var(--soft);border:1px solid var(--line)}
+.banner svg{display:block;width:100%;height:clamp(120px,22vw,220px)}
 .ph{aspect-ratio:4/3;background:var(--soft);border:2px dashed var(--line);border-radius:.6rem;display:grid;place-items:center;text-align:center;padding:1rem;color:var(--muted)}
 figcaption{font-size:.95rem;color:var(--muted);margin-top:.4rem}
 details{background:var(--card);border:1px solid var(--line);border-radius:.6rem;padding:.4rem 1rem;margin:.5rem 0}
@@ -83,6 +86,7 @@ footer{border-top:1px solid var(--line);padding:1.5rem 1.2rem;text-align:center;
 <main id="contenu" tabindex="-1">
 
 <section id="accueil" data-t="Accueil" hidden>
+<div class="banner"><svg viewBox="0 0 1200 220" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration : des lignes de transport colorées avec leurs arrêts, au bord d’une lagune"><path d="M0 170 C200 150 380 200 600 180 S1000 150 1200 175 V220 H0Z" fill="var(--brand)" opacity=".18"/><path d="M-20 150 C200 60 380 170 600 100 S1000 40 1220 90" fill="none" stroke="var(--nord)" stroke-width="7" stroke-linecap="round"/><path d="M-20 120 C250 150 450 70 700 120 S1050 150 1220 110" fill="none" stroke="var(--est)" stroke-width="7" stroke-linecap="round"/><path d="M100 230 C300 140 500 150 650 70 S950 110 1100 -10" fill="none" stroke="var(--sud)" stroke-width="7" stroke-linecap="round"/><path d="M-20 105 C300 135 600 55 900 80 S1150 40 1220 50" fill="none" stroke="var(--metro)" stroke-width="6" stroke-dasharray="16 10"/><path d="M-20 190 C250 160 500 205 800 150 S1100 160 1220 140" fill="none" stroke="var(--brt)" stroke-width="6" stroke-dasharray="16 10"/><g fill="var(--card)" stroke="var(--ink)" stroke-width="3"><circle cx="150" cy="108" r="9"/><circle cx="330" cy="128" r="9"/><circle cx="470" cy="128" r="9"/><circle cx="600" cy="100" r="9"/><circle cx="760" cy="110" r="9"/><circle cx="920" cy="72" r="9"/><circle cx="1060" cy="58" r="9"/><circle cx="250" cy="170" r="9"/><circle cx="650" cy="70" r="9"/><circle cx="860" cy="150" r="9"/></g></svg></div>
 <h1 tabindex="-1">Se déplacer à Abidjan : où sont les arrêts, où vivent les habitants ?</h1>
 <p class="lead">Abidjan est la plus grande ville de Côte d’Ivoire. Ici, on se déplace surtout en gbaka (minibus) et en woro-woro (taxi collectif). Nous avons placé leurs arrêts sur une carte pour voir quelles communes sont bien ou mal desservies.</p>
 <dl class="stats" aria-label="Chiffres clés">
@@ -92,11 +96,11 @@ footer{border-top:1px solid var(--line);padding:1.5rem 1.2rem;text-align:center;
 <div><dt>Lignes de transport</dt><dd>490</dd></div>
 </dl>
 <div class="box"><h2 style="margin-top:0">Notre question</h2>
-<p>Les habitants des communes les plus éloignées du centre ont-ils moins d’arrêts à proximité que ceux du centre ?</p>
-<p><small>Question proposée, à confirmer ou reformuler par le groupe.</small></p></div>
+<p>Le transport artisanal (gbaka et woro-woro) dessert-il de la même façon toutes les communes du District d’Abidjan, et quelles zones restent à l’écart avant l’arrivée du métro et du BRT ?</p></div>
 <p><a class="btn" href="#carte">Ouvrir la carte</a><a class="btn alt" href="#donnees">Voir les chiffres</a></p>
 <h2>Qui sommes-nous ?</h2>
-<p>Projet de cartographie réalisé par Marie Aissatou Boye, Eva et Mardoche Konan.</p>
+<p>Projet de cartographie réalisé par Marie Aissatou Boye, Eva Ait Saadi et Mardochée Konan.</p>
+<p>Master 2 Humanités Numériques, Université Polytechnique Hauts-de-France.</p>
 <h2>Comment utiliser ce site</h2>
 <ol><li>Lisez la page <a href="#territoire">Le territoire</a> pour savoir de quoi on parle.</li><li>Explorez la <a href="#carte">carte interactive</a> : cliquez sur une commune ou un arrêt.</li><li>Comparez les communes dans <a href="#donnees">Les données</a>.</li><li>Regardez nos <a href="#propositions">propositions</a> et nos <a href="#sources">sources</a>.</li></ol>
 </section>
@@ -164,39 +168,21 @@ footer{border-top:1px solid var(--line);padding:1.5rem 1.2rem;text-align:center;
 <section id="photos" data-t="Photos" hidden>
 <h1 tabindex="-1">Photos</h1>
 <p class="lead">Le quotidien des déplacements à Abidjan en images.</p>
-
 <div class="cols">
-
-<figure>
-<img src="Gbaka.jpg" alt="Un gbaka à Abidjan">
-<figcaption>Gbaka. Source : Wikipedia.</figcaption>
-</figure>
-
-<figure>
-<img src="woroworo.jpg" alt="Un woro-woro à Abidjan">
-<figcaption>Woro-woro. Source : Youtube.</figcaption>
-</figure>
-
-<figure>
-<img src="gare.jpg" alt="Gare routière d’Adjamé">
-<figcaption>Gare routière d’Adjamé. Source : Youtube.</figcaption>
-</figure>
-
-<figure>
-<img src="construction.jpg" alt="Chantier du métro d’Abidjan">
-<figcaption>Chantier du métro. Source : https://www.transports.gouv.ci/actualites/metro-dabidjan-construction-des-voies-devitement-sur-12-km.</figcaption>
-</figure>
-
+<figure><img src="Gbaka.jpg" alt="Un gbaka à Abidjan"><figcaption>Gbaka. Source : Wikipédia (https://fr.wikipedia.org/wiki/Gbaka).</figcaption></figure>
+<figure><img src="woroworo.jpg" alt="Un woro-woro à Abidjan"><figcaption>Woro-woro. Source : vidéo Tiktok (https://www.tiktok.com/@travelabidjan/video/7517747386265980182).</figcaption></figure>
+<figure><img src="gare.jpg" alt="La gare routière d’Adjamé"><figcaption>Gare routière d’Adjamé. Source : vidéo YouTube (https://www.youtube.com/watch?v=JDU38c1fv54).</figcaption></figure>
+<figure><img src="construction.jpg" alt="Le chantier du métro d’Abidjan"><figcaption>Chantier du métro. Source : <a href="https://www.transports.gouv.ci/actualites/metro-dabidjan-construction-des-voies-devitement-sur-12-km">transports.gouv.ci, article sur la construction des voies d’évitement</a>.</figcaption></figure>
 </div>
 </section>
 
 <section id="propositions" data-t="Nos propositions" hidden>
 <h1 tabindex="-1">Nos propositions de valorisation du territoire</h1>
-<p class="lead">Cette page sera écrite après l’analyse complète des données.</p>
+<p class="lead">Nos propositions s’appuient sur l’analyse des 4 834 arrêts, de la population de chaque commune et des tracés du métro et du BRT.</p>
 <div class="cols">
-<div class="box"><h2 style="margin-top:0">Ce que nous avons constaté</h2><p>À compléter.</p></div>
-<div class="box"><h2 style="margin-top:0">Ce que nous proposons</h2><p>À compléter.</p></div>
-<div class="box"><h2 style="margin-top:0">Pourquoi cela aiderait</h2><p>À compléter.</p></div>
+<div class="box"><h2 style="margin-top:0">Ce que nous avons constaté</h2><p>Le réseau est très concentré au centre : Adjamé compte 21,9 arrêts par km², contre 6,5 en moyenne en ville. Les communes les moins bien servies ne sont pas seulement en périphérie : Anyama (3 746 habitants par arrêt), mais aussi Koumassi (2 843) et Port-Bouët (2 589). Le métro et le BRT passeront surtout là où les gbaka et les woro-woro sont déjà nombreux : seuls 31 % des arrêts sont à moins de 1 km de leur tracé, et Songon n’en a aucun.</p></div>
+<div class="box"><h2 style="margin-top:0">Ce que nous proposons</h2><ul><li>Renforcer la desserte de Koumassi, Port-Bouët et Anyama.</li><li>Prévoir une desserte pour Songon, par exemple en prolongeant le BRT vers l’ouest.</li><li>Faire des gbaka et des woro-woro des lignes qui amènent les voyageurs vers les stations du métro et du BRT, avec des gares d’échange, surtout à Yopougon et à Abobo.</li><li>Mettre à jour les données de transport (elles datent de 2023) et y ajouter les bus SOTRA et les bateaux-bus.</li></ul></div>
+<div class="box"><h2 style="margin-top:0">Pourquoi cela aiderait</h2><p>Les habitants des communes oubliées auraient plus d’arrêts près de chez eux. Le métro et le BRT serviraient plus de monde, car les gbaka et les woro-woro y amèneraient des voyageurs au lieu de leur faire concurrence. Et des données à jour permettraient de suivre l’évolution du réseau et de mieux décider où agir.</p></div>
 </div>
 </section>
 
@@ -212,6 +198,7 @@ footer{border-top:1px solid var(--line);padding:1.5rem 1.2rem;text-align:center;
 <li><strong>Chiffres du métro</strong> : <a href="https://www.fratmat.info/article/230334/economie/transport-ferroviaire/metro-dabidjan-voici-le-trace-exact-de-la-ligne-1">Fraternité Matin, 8 juillet 2023</a></li>
 <li><strong>Chiffres du BRT</strong> : <a href="https://afrik21.africa/en/work-begins-on-abidjans-brt-to-link-yopougon-and-bingerville-in-45-minutes">Afrik 21</a></li>
 <li><strong>Statut de Brofodoumé</strong> : <a href="https://en.wikipedia.org/wiki/Brofodoum%C3%A9">Wikipédia</a></li>
+<li><strong>Vérification avec l’agent IA de TerraLab dans QGIS</strong> : lignes de transport et arrêts SOTRA d’Abidjan (octobre 2021), source indiquée par l’outil : DigitalTransport4Africa, via data.gouv.ci, Licence Ouverte Etalab.</li>
 </ul>
 <h2>Notre méthode</h2>
 <ol>
@@ -220,12 +207,13 @@ footer{border-top:1px solid var(--line);padding:1.5rem 1.2rem;text-align:center;
 <li>Toujours dans QGIS, nous avons rattaché chacun des 4 834 arrêts à la commune où il se trouve. Nous avons ainsi compté les arrêts et calculé les habitants par arrêt. 4 752 arrêts tombent dans une commune ; 82 sont hors communes.</li>
 <li>Nous avons exporté ces données dans Google My Maps pour créer la carte interactive.</li>
 <li>Nous avons ajouté les tracés du métro et du BRT, en construction, pour comparer le réseau d’aujourd’hui avec celui de demain.</li>
+<li>Enfin, nous avons interrogé l’agent IA de TerraLab, intégré à QGIS, pour contrôler nos données. Il a confirmé que nos 490 lignes concernent bien les gbaka et les woro-woro, et il a trouvé que 926 de nos 4 834 arrêts (19 %) sont aussi des arrêts de la SOTRA. Nous avons gardé nos propres chiffres, car l’agent n’a vérifié qu’une partie du travail.</li>
 </ol>
 <h2>Les limites de notre travail</h2>
 <ul>
 <li>Les données de transport datent de 2023 et la population de 2021 : le réseau a pu changer depuis.</li>
 <li>Les limites d’Anyama, Bingerville et Songon sont approximatives : leurs nombres d’arrêts sont à lire avec prudence.</li>
-<li>Seuls les gbaka et les woro-woro sont pris en compte, pas les bus de la SOTRA (société de transport publique) ni les bateaux-bus. Une commune peut sembler mal desservie alors qu’elle a d’autres transports.</li>
+<li>Seuls les gbaka et les woro-woro sont étudiés. Les bus de la SOTRA et les bateaux-bus sont hors de notre sujet, même si environ un arrêt sur cinq est partagé avec la SOTRA. Une commune peut donc sembler mal desservie alors qu’elle a d’autres transports.</li>
 <li>Les tracés du métro et du BRT dans OpenStreetMap ne sont pas encore complets.</li>
 <li>Une zone sans arrêt peut être une zone non relevée, pas forcément une zone sans transport.</li>
 </ul>
@@ -251,6 +239,8 @@ footer{border-top:1px solid var(--line);padding:1.5rem 1.2rem;text-align:center;
 <dt>Jointure</dt><dd>Relier deux tableaux grâce à une colonne commune, ici le nom de la commune.</dd>
 <dt>Jointure spatiale</dt><dd>Même idée, avec la position : chaque arrêt est rattaché à la commune où il se trouve.</dd>
 <dt>BRT (Bus Rapid Transit)</dt><dd>Bus rapide circulant sur une voie réservée.</dd>
+<dt>SOTRA (Société des transports abidjanais)</dt><dd>Société publique de bus d’Abidjan.</dd>
+<dt>Agent IA (agent d’intelligence artificielle)</dt><dd>Programme qui répond à des questions et exécute des tâches. Ici, l’outil de TerraLab intégré à QGIS.</dd>
 </dl></details>
 </section>
 </main>
@@ -292,6 +282,8 @@ S={k:1,i:1,d:-1};
 $("#tb").addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;const i=+b.dataset.i,k=[0,1,1,2,3][i];
   if(S.i===i)S.d*=-1;else S={k,i,d:i===0?1:-1};table(true)});
 document.querySelectorAll("input[name=m]").forEach(r=>r.addEventListener("change",e=>{mk=e.target.value;chart()}));
+function fb(i){const d=document.createElement("div");d.className="ph";d.textContent="Photo à ajouter : "+i.alt;i.replaceWith(d)}
+document.querySelectorAll("#photos img").forEach(i=>{if(i.complete&&!i.naturalWidth)fb(i);else i.addEventListener("error",()=>fb(i))});
 chart();table(false);route(true);
 </script>
 </body>
