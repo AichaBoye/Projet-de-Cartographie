@@ -23,9 +23,11 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible,[
 h1:focus{outline:none}
 .skip{position:absolute;left:-999px;background:var(--brand);color:var(--on);padding:.6rem 1rem;z-index:20}
 .skip:focus{left:.5rem;top:.5rem}
-header.top{border-bottom:1px solid var(--line);background:var(--card);padding:.8rem 1.2rem}
+header.top{border-bottom:1px solid var(--line);background:var(--card);padding:.8rem 1.2rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.brand-container{display:flex;align-items:center;gap:.8rem}
+.logo{height:2.2rem;width:auto;border-radius:4px}
 .brand{font:800 1.1rem "Bricolage Grotesque",sans-serif;color:var(--ink);text-decoration:none}
-nav ul{list-style:none;margin:.5rem 0 0;padding:0;display:flex;flex-wrap:wrap;gap:.25rem .5rem}
+nav ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.25rem .5rem}
 nav a{display:inline-block;padding:.45rem .8rem;border-radius:.5rem;color:var(--ink);text-decoration:none;min-height:44px;line-height:1.7}
 nav a:hover{background:var(--soft)}
 nav a[aria-current="page"]{background:var(--brand);color:var(--on);font-weight:700}
@@ -65,7 +67,7 @@ tfoot td{font-weight:700;background:var(--soft)}
 figure{margin:0}
 figure img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:.6rem}
 .banner{margin:0 0 1.5rem;border-radius:.8rem;overflow:hidden;background:var(--soft);border:1px solid var(--line)}
-.banner svg{display:block;width:100%;height:clamp(120px,22vw,220px)}
+.banner img{display:block;width:100%;height:clamp(120px,22vw,220px);object-fit:cover;}
 .ph{aspect-ratio:4/3;background:var(--soft);border:2px dashed var(--line);border-radius:.6rem;display:grid;place-items:center;text-align:center;padding:1rem;color:var(--muted)}
 figcaption{font-size:.95rem;color:var(--muted);margin-top:.4rem}
 details{background:var(--card);border:1px solid var(--line);border-radius:.6rem;padding:.4rem 1rem;margin:.5rem 0}
@@ -80,13 +82,18 @@ footer{border-top:1px solid var(--line);padding:1.5rem 1.2rem;text-align:center;
 <body>
 <a class="skip" href="#contenu" id="skip">Aller au contenu</a>
 <header class="top">
+<div class="brand-container">
+<img src="Le drapeau.png" alt="Drapeau" class="logo">
 <a class="brand" href="#accueil">Se déplacer à Abidjan</a>
+</div>
 <nav aria-label="Pages du site"><ul id="menu"></ul></nav>
 </header>
 <main id="contenu" tabindex="-1">
 
 <section id="accueil" data-t="Accueil" hidden>
-<div class="banner"><svg viewBox="0 0 1200 220" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration : des lignes de transport colorées avec leurs arrêts, au bord d’une lagune"><path d="M0 170 C200 150 380 200 600 180 S1000 150 1200 175 V220 H0Z" fill="var(--brand)" opacity=".18"/><path d="M-20 150 C200 60 380 170 600 100 S1000 40 1220 90" fill="none" stroke="var(--nord)" stroke-width="7" stroke-linecap="round"/><path d="M-20 120 C250 150 450 70 700 120 S1050 150 1220 110" fill="none" stroke="var(--est)" stroke-width="7" stroke-linecap="round"/><path d="M100 230 C300 140 500 150 650 70 S950 110 1100 -10" fill="none" stroke="var(--sud)" stroke-width="7" stroke-linecap="round"/><path d="M-20 105 C300 135 600 55 900 80 S1150 40 1220 50" fill="none" stroke="var(--metro)" stroke-width="6" stroke-dasharray="16 10"/><path d="M-20 190 C250 160 500 205 800 150 S1100 160 1220 140" fill="none" stroke="var(--brt)" stroke-width="6" stroke-dasharray="16 10"/><g fill="var(--card)" stroke="var(--ink)" stroke-width="3"><circle cx="150" cy="108" r="9"/><circle cx="330" cy="128" r="9"/><circle cx="470" cy="128" r="9"/><circle cx="600" cy="100" r="9"/><circle cx="760" cy="110" r="9"/><circle cx="920" cy="72" r="9"/><circle cx="1060" cy="58" r="9"/><circle cx="250" cy="170" r="9"/><circle cx="650" cy="70" r="9"/><circle cx="860" cy="150" r="9"/></g></svg></div>
+<div class="banner">
+<img src="lesGbaka.jpg" alt="Bannière représentant des gbakas à Abidjan">
+</div>
 <h1 tabindex="-1">Se déplacer à Abidjan : où sont les arrêts, où vivent les habitants ?</h1>
 <p class="lead">Abidjan est la plus grande ville de Côte d’Ivoire. Ici, on se déplace surtout en gbaka (minibus) et en woro-woro (taxi collectif). Nous avons placé leurs arrêts sur une carte pour voir quelles communes sont bien ou mal desservies.</p>
 <dl class="stats" aria-label="Chiffres clés">
@@ -120,7 +127,7 @@ footer{border-top:1px solid var(--line);padding:1.5rem 1.2rem;text-align:center;
 
 <section id="carte" data-t="La carte" hidden>
 <h1 tabindex="-1">La carte interactive</h1>
-<p class="lead">Zoomez, déplacez la carte et cliquez : une commune affiche sa population, son nombre d’arrêts et ses habitants par arrêt ; un arrêt affiche son nom et sa commune.</p>
+<p class="lead">Zoomez, déplacez la carte et cliquez : une commune affiche sa population, son nombre d’arrêts et ses habitants par arrêt; un arrêt affiche son nom et sa commune.</p>
 <iframe class="map" title="Carte interactive de la mobilité dans le District autonome d’Abidjan" src="https://www.google.com/maps/d/embed?mid=1e9cyUT5NYOGncZpbd1kboni1wAykreo&amp;ehbc=2E312F" loading="lazy"></iframe>
 <p>La carte ne s’affiche pas ? <a href="https://www.google.com/maps/d/viewer?mid=1e9cyUT5NYOGncZpbd1kboni1wAykreo" target="_blank" rel="noopener">Ouvrez-la dans un nouvel onglet (Google My Maps)</a>.</p>
 <h2>Ce que montrent les calques</h2>
@@ -204,7 +211,7 @@ footer{border-top:1px solid var(--line);padding:1.5rem 1.2rem;text-align:center;
 <ol>
 <li>Nous avons récupéré les données de transport, de population et de limites des communes.</li>
 <li>Dans QGIS, un logiciel de cartographie, nous avons assemblé les limites des 13 communes, puis relié la population de 2021.</li>
-<li>Toujours dans QGIS, nous avons rattaché chacun des 4 834 arrêts à la commune où il se trouve. Nous avons ainsi compté les arrêts et calculé les habitants par arrêt. 4 752 arrêts tombent dans une commune ; 82 sont hors communes.</li>
+<li>Toujours dans QGIS, nous avons rattaché chacun des 4 834 arrêts à la commune où il se trouve. Nous avons ainsi compté les arrêts et calculé les habitants par arrêt. 4 752 arrêts tombent dans une commune; 82 sont hors communes.</li>
 <li>Nous avons exporté ces données dans Google My Maps pour créer la carte interactive.</li>
 <li>Nous avons ajouté les tracés du métro et du BRT, en construction, pour comparer le réseau d’aujourd’hui avec celui de demain.</li>
 <li>Enfin, nous avons interrogé l’agent IA de TerraLab, intégré à QGIS, pour contrôler nos données. Il a confirmé que nos 490 lignes concernent bien les gbaka et les woro-woro, et il a trouvé que 926 de nos 4 834 arrêts (19 %) sont aussi des arrêts de la SOTRA. Nous avons gardé nos propres chiffres, car l’agent n’a vérifié qu’une partie du travail.</li>
